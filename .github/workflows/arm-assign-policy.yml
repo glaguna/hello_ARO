@@ -1,4 +1,4 @@
-name: Lab3 Assignment Policy to RG
+name: Assignment Policy to Azure RG
 
 on: workflow_dispatch
 
