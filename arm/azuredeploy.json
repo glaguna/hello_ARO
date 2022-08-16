@@ -4,7 +4,7 @@
     "parameters": {
       "location" : {
         "type": "string",
-        "defaultValue": "eastus2",
+        "defaultValue": "eastus",
         "metadata": {
           "description": "Location"
         }
@@ -14,13 +14,6 @@
           "defaultValue": "",
           "metadata": {
               "description": "Domain Prefix"
-          }
-      },
-      "pullSecret": {
-          "type": "string",
-          "defaultValue": ""
-          "metadata": {
-              "description": "Pull secret from cloud.redhat.com. The json should be input as a string"
           }
       },
       "clusterVnetName": {
@@ -236,8 +229,7 @@
             "properties": {
                 "clusterProfile": {
                     "domain": "[parameters('domain')]",
-                    "resourceGroupId": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/aro-', parameters('domain'))]",
-                    "pullSecret": "[parameters('pullSecret')]"
+                    "resourceGroupId": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/aro-', parameters('domain'))]"
                 },
                 "networkProfile": {
                     "podCidr": "[parameters('podCidr')]",
