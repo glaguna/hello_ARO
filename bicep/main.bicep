@@ -146,7 +146,6 @@ resource clusterName_resource 'Microsoft.RedHatOpenShift/OpenShiftClusters@2020-
     clusterProfile: {
       domain: domain
       resourceGroupId: '/subscriptions/${subscription().subscriptionId}/resourceGroups/aro-${domain}-${location}'
-      pullSecret: pullSecret
     }
     networkProfile: {
       podCidr: podCidr
