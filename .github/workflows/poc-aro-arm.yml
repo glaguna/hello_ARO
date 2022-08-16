@@ -1,4 +1,4 @@
-name: PoC ARM-Template ARO
+name: Deploy ARO with ARM Template
 
 on: workflow_dispatch
 

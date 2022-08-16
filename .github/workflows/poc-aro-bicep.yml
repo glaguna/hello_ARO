@@ -1,4 +1,4 @@
-name: Deploy Bicep Template Lab1
+name: Deploy ARO with Bicep Template
 
 on: workflow_dispatch
 
