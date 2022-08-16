@@ -1,4 +1,4 @@
-# POC about Azure RedHat OpenShift 
+# PoC about Azure RedHat OpenShift 
 
 This is a collection of sample projects for Cloud Application Developer using Azure Cloud Platform. The sample projects are arranged in different topics about Infrastructure as Code and deployment on Azure supported by Secure DevOps Practices.
 
