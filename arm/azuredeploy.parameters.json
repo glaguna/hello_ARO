@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "domain": {
+            "value": "GET-PREREQ-dnsZone"
+        },
+        "pullSecret": {
+            "value": "GET-PREREQ-dnsZoneRG"
+        },
+        "clusterName": {
+            "value": "OA-ARO-POC-001"
+        },
+        "aadClientId": {
+            "value": "nfs"
+        },
+        "aadObjectId": {
+            "value": 1024
+        },
+        "aadClientSecret": {
+            "value": false
+        },
+        "rpObjectId": {
+            "value": "GEN-UNIQUE"
+        }
+    }
+}
