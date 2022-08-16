@@ -1,8 +1,8 @@
 @description('Location')
-param location string = 'eastus2'
+param location string
 
 @description('Domain Prefix')
-param domain string = 'oapocdomain'
+param domain string
 
 @description('Pull secret from cloud.redhat.com. The json should be input as a string')
 param pullSecret string
@@ -46,8 +46,7 @@ param clusterName string
 
 @description('Tags for resources')
 param tags object = {
-  env: 'Dev'
-  dept: 'Ops'
+  env: 'POC'
 }
 
 @description('Api Server Visibility')

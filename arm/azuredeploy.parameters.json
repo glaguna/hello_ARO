@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "domain": {
-            "value": "oadomain"
+            "value": "arodomain001"
         },
         "clusterName": {
             "value": "oa-aro-poc-001"
