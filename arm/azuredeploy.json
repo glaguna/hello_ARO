@@ -103,8 +103,7 @@
       "tags": {
           "type": "object",
           "defaultValue" : {
-              "env": "Dev",
-              "dept": "Ops"
+              "env": "PoC"
           },
           "metadata": {
               "description": "Tags for resources"
