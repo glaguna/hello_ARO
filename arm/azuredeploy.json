@@ -236,7 +236,8 @@
             "properties": {
                 "clusterProfile": {
                     "domain": "[parameters('domain')]",
-                    "resourceGroupId": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/aro-', parameters('domain'))]"
+                    "resourceGroupId": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/aro-', parameters('domain'))]",
+                    "pullSecret": "[parameters('pullSecret')]"
                 },
                 "networkProfile": {
                     "podCidr": "[parameters('podCidr')]",
