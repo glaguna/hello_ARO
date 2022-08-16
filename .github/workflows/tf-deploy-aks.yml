@@ -1,15 +1,15 @@
-name: 'Terraform Apply AKS'
+name: 'Terraform Apply ARO'
 
 on: workflow_dispatch
 
 jobs:
-  Terraform-Apply-AKS:
-    name: "Deploy AKS"
+  Terraform-Apply-ARO:
+    name: "Deploy ARO"
     runs-on: ubuntu-latest
-    environment: PoC-AKS
+    environment: PoC-ARO
     defaults:
       run:
-        working-directory: "./terraform/aks"
+        working-directory: "./terraform"
 
     steps:
     - name: Checkout
