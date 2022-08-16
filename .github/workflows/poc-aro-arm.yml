@@ -4,6 +4,7 @@ on: workflow_dispatch
 
 env:
   AZURERG: POC-ARO-001
+  AZURE_REGION: eastus2
 
 jobs:
 
@@ -23,7 +24,7 @@ jobs:
         with:
           azcliversion: 2.30.0 # Optional
           inlineScript: |
-            az group create --location eastus2 -n $AZURERG
+            az group create --location $AZURE_REGION -n $AZURERG
             
   arm-template-deploy:
     if: ${{ success() }}
