@@ -6,7 +6,7 @@
             "value": "oadomain"
         },
         "pullSecret": {
-            "value": "pull-secret.txt"
+            "value": "./pull-secret/pull-secret.txt"
         },
         "clusterName": {
             "value": "oa-aro-poc-001"
