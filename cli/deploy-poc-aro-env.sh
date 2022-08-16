@@ -12,6 +12,6 @@ az network vnet subnet create --resource-group $RESOURCEGROUP --vnet-name aro-vn
 
 az network vnet subnet create --resource-group $RESOURCEGROUP --vnet-name aro-vnet --name worker-subnet --address-prefixes 10.0.2.0/23 --service-endpoints Microsoft.ContainerRegistry
 
-az network vnet subnet update --name master-subnet -resource-group $RESOURCEGROUP --vnet-name aro-vnet --disable-private-link-service-network-policies true
+az network vnet subnet update --name master-subnet --resource-group $RESOURCEGROUP --vnet-name aro-vnet --disable-private-link-service-network-policies true
 
 az aro create --resource-group $RESOURCEGROUP --name $CLUSTER --vnet aro-vnet --master-subnet master-subnet --worker-subnet worker-subnet --worker-count 3
