@@ -30,6 +30,7 @@ jobs:
     if: ${{ success() }}
     needs: create-azure-rg
     runs-on: ubuntu-latest
+    environment: PoC
     steps:
       # Checkout code
     - uses: actions/checkout@main
