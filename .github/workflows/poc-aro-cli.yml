@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Deploy Azure-Policy
+name: Lab3 Deploy Azure-Policy
 
 # Controls when the workflow will run
 on: workflow_dispatch
@@ -28,6 +28,6 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           
       - run: |
-          chmod 775 ./arm/policy/tag-policy.sh
-          ./arm/lab3/tag-policy.sh $APP_ID $SP_PWD $TENANT_ID
+          chmod 775 ./cli/deploy-poc-aro-env.sh
+          ./cli/deploy-poc-aro-env.sh $APP_ID $SP_PWD $TENANT_ID
         shell: bash
