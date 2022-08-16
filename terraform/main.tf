@@ -24,7 +24,7 @@ resource "azurerm_resource_group" "rg" {
 
 resource "azurerm_template_deployment" "terraform-arm" {
   name                = "terraform-arm-aro-004"
-  resource_group_name = azurerm_resource_group.terraform-arm.name
+  resource_group_name = azurerm_resource_group.rg.name
 
   template_body = file("./arm/azuredeploy.json")
 

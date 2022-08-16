@@ -1,10 +1,10 @@
-name: 'Terraform Apply ARO'
+name: 'Deploying ARO with TF and ARM'
 
 on: workflow_dispatch
 
 jobs:
-  Terraform-Apply-ARO:
-    name: "Deploy ARO"
+  deploying-aro:
+    name: "Deploying ARO"
     runs-on: ubuntu-latest
     environment: PoC-ARO
     defaults:
