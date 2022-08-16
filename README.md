@@ -1,15 +1,18 @@
-# POC about ARO 
+# POC about Azure RedHat OpenShift 
 
 This is a collection of sample projects for Cloud Application Developer using Azure Cloud Platform. The sample projects are arranged in different topics about Infrastructure as Code and deployment on Azure supported by Secure DevOps Practices.
 
-Infrastructure as code, reference architecture:
-[DevSecOps for infrastructure as code (IaC)](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/devsecops-infrastructure-as-code)
-![](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/media/devsecops-for-iac.png#lightbox)
+Azure Red Hat OpenShift, reference architecture:
+[ARO Reference Architecture](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/azure-red-hat-openshift-reference-architecture-amp-reference/ba-p/3470115)
+![](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/377746i9632EE4217A98930/image-size/large?v=v2&px=999)
 
 #### Other Resources
 - [What is Infrastructure as Code?](https://docs.microsoft.com/en-us/devops/deliver/what-is-infrastructure-as-code)
 - [Infrastructure as code](https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/infrastructure-as-code)
 - [Using IaC on Azure](https://docs.microsoft.com/en-us/devops/deliver/what-is-infrastructure-as-code#using-iac-on-azure)
+- [Deploy an Azure Red Hat OpenShift cluster with an Azure Resource Manager template or Bicep file](https://docs.microsoft.com/en-us/azure/openshift/quickstart-openshift-arm-bicep-template?pivots=aro-bicep)
+- [Installing a cluster on Azure](https://docs.openshift.com/container-platform/4.9/installing/installing_azure/preparing-to-install-on-azure.html)
+- [Azure Red Hat OpenShift](https://docs.microsoft.com/en-us/azure/openshift/intro-openshift)
 - [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/overview)
 - [Azure Policy definition structure](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/definition-structure)
 
