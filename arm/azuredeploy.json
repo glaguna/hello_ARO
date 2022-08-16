@@ -16,6 +16,12 @@
               "description": "Domain Prefix"
           }
       },
+      "pullSecret": {
+          "type": "string",
+          "metadata": {
+              "description": "Pull secret from cloud.redhat.com. The json should be input as a string"
+          }
+      },
       "clusterVnetName": {
           "type": "string",
           "defaultValue": "aro-vnet",
@@ -229,7 +235,8 @@
             "properties": {
                 "clusterProfile": {
                     "domain": "[parameters('domain')]",
-                    "resourceGroupId": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/aro-', parameters('domain'))]"
+                    "resourceGroupId": "[concat('/subscriptions/', subscription().subscriptionId,'/resourceGroups/aro-', parameters('domain'))]",
+                    "pullSecret": "[parameters('pullSecret')]"
                 },
                 "networkProfile": {
                     "podCidr": "[parameters('podCidr')]",

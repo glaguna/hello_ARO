@@ -8,6 +8,9 @@
         "clusterName": {
             "value": "oa-aro-poc-001"
         },
+        "pullSecret": {
+            "value": ""
+        },
         "aadClientId": {
             "value": "941382f5-be9d-42a4-b1e2-b9eb152f1e05"
         },
