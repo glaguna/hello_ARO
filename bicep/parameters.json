@@ -25,6 +25,9 @@
       },
       "clusterName": {
         "value": "oa-aro-poc-001"
+      },
+      "pullSecret": {
+        "value": ""
       }
     }
   }

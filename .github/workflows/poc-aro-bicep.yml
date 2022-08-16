@@ -48,5 +48,5 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ env.AZURERG }}
         template: ./bicep/main.bicep
-        parameters: ./bicep/azuredeploy.parameters.json
+        parameters: ./bicep/parameters.json
         failOnStdErr: false
