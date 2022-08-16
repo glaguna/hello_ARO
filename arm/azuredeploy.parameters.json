@@ -3,25 +3,25 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "domain": {
-            "value": "GET-PREREQ-dnsZone"
+            "value": "oadomain"
         },
         "pullSecret": {
-            "value": "GET-PREREQ-dnsZoneRG"
+            "value": "pull-secret.txt"
         },
         "clusterName": {
-            "value": "OA-ARO-POC-001"
+            "value": "oa-aro-poc-001"
         },
         "aadClientId": {
-            "value": "nfs"
+            "value": "941382f5-be9d-42a4-b1e2-b9eb152f1e05"
         },
         "aadObjectId": {
-            "value": 1024
+            "value": "7ac88d5a-36aa-4af0-bf4f-2f34e5754cce"
         },
         "aadClientSecret": {
-            "value": false
+            "value": "2X9go9BAYryazU~qtyx5DByh0PKZB7_o7_"
         },
         "rpObjectId": {
-            "value": "GEN-UNIQUE"
+            "value": "50c17c64-bc11-4fdd-a339-0ecd396bf911"
         }
     }
 }
