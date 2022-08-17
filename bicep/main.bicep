@@ -46,7 +46,11 @@ param clusterName string
 
 @description('Tags for resources')
 param tags object = {
+<<<<<<< HEAD
+  env: 'PoC'
+=======
   env: 'POC'
+>>>>>>> da701593cca24b97496f1c9f4f41502ac8d5a971
 }
 
 @description('Api Server Visibility')
