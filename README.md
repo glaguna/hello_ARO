@@ -6,6 +6,29 @@ Azure Red Hat OpenShift, reference architecture:
 [ARO Reference Architecture](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/azure-red-hat-openshift-reference-architecture-amp-reference/ba-p/3470115)
 ![](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/377746i9632EE4217A98930/image-size/large?v=v2&px=999)
 
+Prerequirements:
+- Create service principal to create GitHub Secrets used by workflows.
+
+```shell
+  az ad sp create-for-rbac --name "aropocsp" --role contributor \
+                            --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group} \
+                            --sdk-auth
+                            
+  # Replace {subscription-id}, {resource-group} with the subscription, resource group details
+
+  # The command should output a JSON object similar to this:
+
+ 
+  {
+    "clientId": "<GUID>",
+    "clientSecret": "<STRING>",
+    "subscriptionId": "<GUID>",
+    "tenantId": "<GUID>",
+    "resourceManagerEndpointUrl": "<URL>"
+    (...)
+  }
+  ```
+
 #### Other Resources
 - [What is Infrastructure as Code?](https://docs.microsoft.com/en-us/devops/deliver/what-is-infrastructure-as-code)
 - [Infrastructure as code](https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/infrastructure-as-code)
