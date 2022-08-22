@@ -12,16 +12,16 @@
             "value": ""
         },
         "aadClientId": {
-            "value": "941382f5-be9d-42a4-b1e2-b9eb152f1e05"
+            "value": "00000000-0000-0000-0000-000000000000"
         },
         "aadObjectId": {
-            "value": "7ac88d5a-36aa-4af0-bf4f-2f34e5754cce"
+            "value": "00000000-0000-0000-0000-000000000000"
         },
         "aadClientSecret": {
-            "value": "2X9go9BAYryazU~qtyx5DByh0PKZB7_o7_"
+            "value": "00000000-0000-0000-0000-000000000000"
         },
         "rpObjectId": {
-            "value": "50c17c64-bc11-4fdd-a339-0ecd396bf911"
+            "value": "00000000-0000-0000-0000-000000000000"
         }
     }
 }

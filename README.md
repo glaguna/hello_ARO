@@ -7,7 +7,7 @@ Azure Red Hat OpenShift, reference architecture:
 ![](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/377746i9632EE4217A98930/image-size/large?v=v2&px=999)
 
 Prerequirements:
-- Create service principal to create GitHub Secrets used by workflows.
+- Create service principal to create GitHub Secrets (AZURE_CREDENTIALS) used by workflows.
 
 ```shell
   az ad sp create-for-rbac --name "aropocsp" --role contributor \
@@ -27,6 +27,16 @@ Prerequirements:
     "resourceManagerEndpointUrl": "<URL>"
     (...)
   }
+  ```
+
+Get the service principal object ID for Service Principal "aropocsp", this value will be used as a parameter "aadObjectId"
+```shell
+  az ad sp show --id $SP_CLIENT_ID | jq -r '.id'
+  ```
+
+Get the service principal object ID for the OpenShift resource provider, this value will be used as a parameter "rpObjectId"
+```shell
+  az ad sp list --display-name "Azure Red Hat OpenShift RP" --query [0].id -o tsv
   ```
 
 #### Other Resources

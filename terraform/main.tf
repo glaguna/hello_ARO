@@ -4,9 +4,9 @@ terraform {
   }
   backend "remote" {
     # hostname     = "app.terraform.io"
-    organization = "personal-mobile"
+    organization = "<your_terraform-cloud_org>"
     workspaces {
-      name = "arm-template"
+      name = "<your_terraform-cloud_workspace>"
     }
   }
 }
@@ -32,10 +32,10 @@ resource "azurerm_template_deployment" "terraform-arm" {
     "domain" = "arodomain004"
     "clusterName" = "oa-aro-poc-004"
     "pullSecret" = ""
-    "aadClientId" = "941382f5-be9d-42a4-b1e2-b9eb152f1e05"
-    "aadObjectId" = "7ac88d5a-36aa-4af0-bf4f-2f34e5754cce"
-    "aadClientSecret" = "2X9go9BAYryazU~qtyx5DByh0PKZB7_o7_"
-    "rpObjectId" = "50c17c64-bc11-4fdd-a339-0ecd396bf911"
+    "aadClientId" = "00000000-0000-0000-0000-000000000000"
+    "aadObjectId" = "00000000-0000-0000-0000-000000000000"
+    "aadClientSecret" = "00000000-0000-0000-0000-000000000000"
+    "rpObjectId" = "00000000-0000-0000-0000-000000000000"
   }
 
   deployment_mode = "Incremental"
