@@ -7,7 +7,7 @@ Azure Red Hat OpenShift, reference architecture:
 ![](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/377746i9632EE4217A98930/image-size/large?v=v2&px=999)
 
 Prerequirements:
-- Create service principal to create GitHub Secrets (AZURE_CREDENTIALS) used by workflows.
+- Create service principal to create GitHub Secret (AZURE_CREDENTIALS) used by workflows.
 
 ```shell
   az ad sp create-for-rbac --name "aropocsp" --role contributor \
