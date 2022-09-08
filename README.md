@@ -3,8 +3,8 @@
 This is a collection of sample projects for Cloud Application Developer using Azure Cloud Platform. The sample projects are arranged in different topics about Infrastructure as Code and deployment on Azure supported by Secure DevOps Practices.
 
 Azure Red Hat OpenShift, reference architecture:
-[ARO Reference Architecture](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/azure-red-hat-openshift-reference-architecture-amp-reference/ba-p/3470115)
-![](https://techcommunity.microsoft.com/t5/image/serverpage/image-id/377746i9632EE4217A98930/image-size/large?v=v2&px=999)
+[ARO Reference Architecture](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/app-platform/azure-red-hat-openshift/landing-zone-accelerator)
+![](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/app-platform/azure-red-hat-openshift/media/landing-zone-architecture.png)
 
 Prerequirements:
 - Create service principal to create GitHub Secret (AZURE_CREDENTIALS) used by workflows.
