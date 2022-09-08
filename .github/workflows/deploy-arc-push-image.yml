@@ -1,0 +1,29 @@
+# Use Azure Container Registry with Azure Red Hat OpenShift
+# https://docs.microsoft.com/en-us/azure/openshift/howto-use-acr-with-aro
+
+name: Deploy ACR and Push Image
+
+on:  workflow_dispatch
+
+env:
+  AZURE_REGION: eastus  # set this to your application's name
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  create-acr_push-image:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Create Azure RG
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az acr create --resource-group ${{ secrets.AZURE_RG }} --name ${{ secrets.ACR_NAME }} --sku Basic --location ${{ env.AZURE_REGION }}
+          az acr build -t javawebapp -r ${{ secrets.ACR_NAME }} https://github.com/oaviles/hello_java.git -f Dockerfile --platform linux
+          
