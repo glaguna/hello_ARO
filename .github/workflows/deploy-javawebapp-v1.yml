@@ -1,0 +1,29 @@
+name: Deploy App to ARO V1
+
+# Controls when the workflow will run
+on: workflow_dispatch
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  deploy-app-to-aro:
+    runs-on: ubuntu-latest
+    environment:
+      name: PoC-EKS
+      url: http://localhost/FlightBookingSystemSample
+      
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Install oc
+        uses: redhat-actions/oc-installer@v1
+        with:
+          oc_version: '4.6'
+          
+      - name: Deploy App to ARO
+        run: |
+          oc login --token=${{ secrets.OPENSHIFT_TOKEN }} --server=${{ secrets.OPENSHIFT_SERVER }}
+          oc new-project javawebapp
+          oc create secret docker-registry --docker-server=${{ secrets.ACR_NAME }}.azurecr.io --docker-username=${{ secrets.ACR_USER }} --docker-password=${{ secrets.ACR_PWD }} --docker-email=unused acr-secret
+          oc create -f ./yaml-files/deploy-javawebapp-aro.yaml
+          oc expose svc/javawebapp
+          oc get route javawebapp
