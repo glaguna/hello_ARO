@@ -51,6 +51,8 @@ Get the service principal object ID for the OpenShift resource provider, this va
 
 ### Check More DevSquad Projects
 * [DevSquad Main Project](https://github.com/microsoft/fast-prototyping)
+* [DevSquad Project: Azure Spring Cloud](https://github.com/oaviles/hello_springcloud)
+* [DevSquad Project: Java on Azure](https://github.com/oaviles/hello_java)
 
 > Note: This page is getting updated so make sure to check regularly for new resources.
 
