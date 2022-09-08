@@ -1,0 +1,32 @@
+# Use Azure Container Registry with Azure Red Hat OpenShift (ARO)
+# https://docs.microsoft.com/en-us/azure/openshift/howto-use-acr-with-aro
+
+name: Connect ACR and ARO
+
+# Controls when the workflow will run
+on: workflow_dispatch
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  connect-acr-to-aro:
+    runs-on: ubuntu-latest
+
+
+    steps:
+
+      - uses: actions/checkout@v3
+      
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      
+      - name: Install oc
+        uses: redhat-actions/oc-installer@v1
+        with:
+          oc_version: '4.6'
+          
+      - name: Create ACR Secret (v3)
+        run: |
+          oc login --token=${{ secrets.OPENSHIFT_TOKEN }} --server=${{ secrets.OPENSHIFT_SERVER }}
+          oc create secret docker-registry --docker-server=${{ secrets.ACR_NAME }}.azurecr.io --docker-username=${{ secrets.ACR_USER }} --docker-password=${{ secrets.ACR_PWD }} --docker-email=unused acr-secret
