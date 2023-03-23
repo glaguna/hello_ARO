@@ -1,0 +1,30 @@
+name: Deploy ARO with ARM Template
+
+on: workflow_dispatch
+
+env:
+  AZURERG: aro-work-898170
+  AZURE_REGION: eastus2
+
+jobs:
+
+  arm-template-deploy-lab:
+    runs-on: ubuntu-latest
+    environment: Lab-ARO
+    steps:
+      # Checkout code
+    - uses: actions/checkout@main
+
+      # Log into Azure
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # Deploy ARM template
+    - name: Deploy ARO with ARM Template
+      uses: azure/arm-deploy@v1
+      with:
+        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
+        resourceGroupName: ${{ env.AZURERG }}
+        template: ./arm/azuredeploy.json
+        parameters: ./arm/azuredeploy.parameters.json
