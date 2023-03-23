@@ -1,4 +1,4 @@
-name: Deploy ARO with ARM Template
+name: Deploy ARO Lab with ARM Template
 
 on: workflow_dispatch
 
