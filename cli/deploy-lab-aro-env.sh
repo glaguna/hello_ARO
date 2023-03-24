@@ -4,8 +4,6 @@ CLUSTER=oa-aro-poc-003                 # the name of your cluster
 
 az login --service-principal -u $1 -p $2 --tenant $3
 
-az group create --name $RESOURCEGROUP --location $LOCATION
-
 az network vnet create --resource-group $RESOURCEGROUP --name aro-vnet --address-prefixes 10.0.0.0/22
 
 az network vnet subnet create --resource-group $RESOURCEGROUP --vnet-name aro-vnet --name master-subnet --address-prefixes 10.0.0.0/23 --service-endpoints Microsoft.ContainerRegistry
